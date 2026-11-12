@@ -46,3 +46,13 @@
 - 서명·본문·문서 손상과 실제 제출 성공, 사용자의 시간 절감 효과는 검증 범위가 아닙니다.
 
 검증용 파일은 전부 가상 데이터입니다. `preview.png`는 실제 구현한 앱의 브라우저 화면입니다.
+
+## GitHub Pages 게시 확인
+
+2026-11-13 후속 배포 요청으로 https://github.com/hoodie5622/machimpyo 에 소스를 게시하고 https://hoodie5622.github.io/machimpyo/ 에 배포했습니다.
+
+- GitHub Actions의 테스트·정적 산출물 준비·배포 단계 성공을 확인했습니다.
+- 최초 실행은 Pages 활성화 전이라 configure-pages에서 실패했습니다. Pages 소스를 GitHub Actions로 설정한 뒤 동일 실행을 다시 시작하여 성공했습니다.
+- 공개 주소에서 예시 기준 확인 → 학번·이름 → 실제 가상 파일 두 개 선택 → 역할 지정 → 검사를 실행했습니다. 자동 결과 7건 통과, 직접 확인 별도 표시, 브라우저 error/warn 로그 없음이 확인됐습니다.
+- 경로가 /machimpyo/ 아래인 배포 환경에서도 CSS와 JavaScript 모듈이 정상적으로 로드됐습니다.
+- 로컬 저장 기준은 github.io 주소에 자동 복원되지 않습니다. 필요한 기준은 JSON으로 옮겨야 합니다.
