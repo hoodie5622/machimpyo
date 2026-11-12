@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>마침표 검증 안내</title>
+<body>
+<h1>마침표 검증</h1>
+<p>프로젝트 폴더에서 <code>npm test</code>를 실행하면 Node.js 내장 테스트로 규칙·기준·세션·저장·로컬 HTTP 서버를 확인합니다. 별도 설치는 필요하지 않습니다.</p>
+<p><code>node tests/create-fixtures.mjs</code>로 가상 검사 파일을 재생성할 수 있습니다. fixtures의 .pdf 파일은 실제 PDF가 아닌 메타데이터 검사 전용 자료입니다.</p>
+<ol>
+  <li>예시 기준을 선택하고 학번 03107, 이름 홍길동을 입력합니다.</li>
+  <li>fixtures의 잘못된_보고서.pdf를 보고서 역할에 지정합니다. 1바이트 용량 초과, 이름 오류, 동의서 누락을 확인합니다.</li>
+  <li>보고서를 03107_홍길동_탐구보고서.pdf로 교체하고 동의서.pdf를 추가하여 역할을 지정합니다. 이전 결과 무효화와 재검사를 확인합니다.</li>
+  <li>자동 7건 통과 후 직접 확인이 남는지 확인합니다. 체크한 후 입력을 바꾸면 체크가 초기화돼야 합니다.</li>
+  <li>기준을 내보내고 다시 가져옵니다. 같은 기준은 중복 저장하지 않아야 합니다.</li>
+  <li>새 기준을 작성·확정·편집하고 v2 및 이전 버전 비교를 확인합니다.</li>
+</ol>
+<p><a href="responsive.html">320px·360px 화면 확인</a> · <a href="../">앱 열기</a></p>
+</body>
+</html>

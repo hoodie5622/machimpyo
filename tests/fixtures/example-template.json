@@ -1,0 +1,139 @@
+{
+  "documentType": "machimpyo-template",
+  "schemaVersion": 1,
+  "templateId": "tpl_demo_report",
+  "revision": 1,
+  "status": "ready",
+  "title": "탐구 보고서 제출 — 가상 예시",
+  "description": "실제 학교 공지가 아닌 제품 체험용 기준입니다.",
+  "createdAt": "2026-11-11T14:00:00Z",
+  "updatedAt": "2026-11-11T14:00:00Z",
+  "source": {
+    "title": "가상 탐구 보고서 제출 안내",
+    "text": "보고서와 동의서를 각각 1개씩 제출합니다.\n두 문서는 PDF 확장자로 준비합니다.\n각 파일은 5MB 이하입니다.\n보고서 파일명은 학번_이름_탐구보고서.pdf입니다.\n동의서에는 서명이 필요합니다.",
+    "url": null,
+    "checkedAt": "2026-11-11T14:00:00Z"
+  },
+  "roles": [
+    {
+      "id": "report",
+      "label": "보고서"
+    },
+    {
+      "id": "consent",
+      "label": "동의서"
+    }
+  ],
+  "rules": [
+    {
+      "id": "report_count",
+      "type": "role_count",
+      "roleId": "report",
+      "label": "보고서 개수",
+      "params": {
+        "min": 1,
+        "max": 1
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "보고서와 동의서를 각각 1개씩 제출합니다."
+      }
+    },
+    {
+      "id": "consent_count",
+      "type": "role_count",
+      "roleId": "consent",
+      "label": "동의서 개수",
+      "params": {
+        "min": 1,
+        "max": 1
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "보고서와 동의서를 각각 1개씩 제출합니다."
+      }
+    },
+    {
+      "id": "report_extension",
+      "type": "allowed_extensions",
+      "roleId": "report",
+      "label": "보고서 확장자",
+      "params": {
+        "allowed": [
+          "pdf"
+        ]
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "두 문서는 PDF 확장자로 준비합니다."
+      }
+    },
+    {
+      "id": "consent_extension",
+      "type": "allowed_extensions",
+      "roleId": "consent",
+      "label": "동의서 확장자",
+      "params": {
+        "allowed": [
+          "pdf"
+        ]
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "두 문서는 PDF 확장자로 준비합니다."
+      }
+    },
+    {
+      "id": "report_size",
+      "type": "max_file_bytes",
+      "roleId": "report",
+      "label": "보고서 용량",
+      "params": {
+        "maxBytes": 5000000,
+        "displayUnit": "MB"
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "각 파일은 5MB 이하입니다."
+      }
+    },
+    {
+      "id": "consent_size",
+      "type": "max_file_bytes",
+      "roleId": "consent",
+      "label": "동의서 용량",
+      "params": {
+        "maxBytes": 5000000,
+        "displayUnit": "MB"
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "각 파일은 5MB 이하입니다."
+      }
+    },
+    {
+      "id": "report_name",
+      "type": "filename_template",
+      "roleId": "report",
+      "label": "보고서 파일명",
+      "params": {
+        "pattern": "{studentId}_{name}_탐구보고서.pdf"
+      },
+      "evidence": {
+        "kind": "source_quote",
+        "text": "보고서 파일명은 학번_이름_탐구보고서.pdf입니다."
+      }
+    }
+  ],
+  "manualChecks": [
+    {
+      "id": "consent_signature",
+      "roleId": "consent",
+      "question": "동의서의 서명을 직접 확인했나요?",
+      "evidence": {
+        "kind": "source_quote",
+        "text": "동의서에는 서명이 필요합니다."
+      }
+    }
+  ]
+}

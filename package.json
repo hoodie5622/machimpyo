@@ -1,0 +1,12 @@
+{
+  "name": "machimpyo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "제출 전에 파일 이름, 누락, 용량을 확인하는 로컬 웹앱",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}
